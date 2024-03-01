@@ -8,6 +8,9 @@ mytext(String text, double size,
     [FontWeight fontWeight = FontWeight.normal, Color color = Colors.white]) {
   return Text(
     text,
+    maxLines: 2, // Set the maximum number of lines to display
+    overflow: TextOverflow.ellipsis,
+
     style: TextStyle(fontWeight: fontWeight, color: color, fontSize: size),
   );
 }

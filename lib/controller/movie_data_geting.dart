@@ -11,6 +11,10 @@ class MovieData {
       'https://api.themoviedb.org/3/movie/now_playing?api_key=';
   final String upcomingmovie =
       'https://api.themoviedb.org/3/movie/upcoming?api_key=';
+  final String nowplayingmovieurl =
+      'https://api.themoviedb.org/3/movie/now_playing?api_key=';
+  final String upcomingmovieurl =
+      'https://api.themoviedb.org/3/movie/upcoming?api_key=';
   Future<List<Movie>> fetchMovieData(String url) async {
     final result = await apiservices.getData(url);
     if (result.isNotEmpty) {
@@ -53,5 +57,13 @@ class MovieData {
   Future<List<Movie>> getupcoming() async {
     List<Movie> trendingMovies = await fetchMovieData(upcomingmovie);
     return trendingMovies;
+  }
+
+  Future<List<Movie>> getNowPlayingMovies() async {
+    return await fetchMovieData(nowplayingmovieurl);
+  }
+
+  Future<List<Movie>> getUpcomingMovies() async {
+    return await fetchMovieData(upcomingmovieurl);
   }
 }

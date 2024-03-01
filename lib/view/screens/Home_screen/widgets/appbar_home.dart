@@ -18,10 +18,8 @@ AppBar homePageAppBar(BuildContext context) {
         width: mediaqueryHeight(0.02, context),
       ),
       IconButton(
-          onPressed: () async {
-            // await apiservices.loadtrendingmovies();
-          },
-          icon: Icon(
+          onPressed: () async {},
+          icon: const Icon(
             Icons.search,
             color: Colors.white,
           )),

@@ -29,4 +29,13 @@ class Apiservices {
     }
     return [];
   }
+
+  Future<List> search(
+    String value,
+  ) async {
+    final searchsUrl =
+        'https://api.themoviedb.org/3/search/movie?query=$value&include_adult=false&language=en-US&api_key=$apikey';
+    log(searchsUrl);
+    return getData(searchsUrl, search: true);
+  }
 }

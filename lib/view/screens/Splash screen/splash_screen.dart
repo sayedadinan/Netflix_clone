@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:netflix_/view/screens/Home_screen/home_screen.dart';
+import 'package:netflix_/widgets/bottom%20navigation/bottom_nav.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => const BottomNavigation(),
         ),
         (route) => false,
       );
